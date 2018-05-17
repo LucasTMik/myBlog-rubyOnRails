@@ -61,21 +61,19 @@
     <section class="col-l8 my-left">
 
         <!--Primeiro e Exemplo de post-->
-        <a href="post001.html">
-            <section class="col-l5 post">
-                <header>
-                    <img src="img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
-                    <h2>Exemplo de POst</h2>
-                </header>
-                <article>
-                    <p>Neste blog, pretendo colocar de fotos
-                        que me interessam até projetos que 
-                        estou focado. E espero de todos possam deixar 
-                        aquele feedback!
-                    </p>
-                </article>
-            </section>
-        </a>
+        <% @posts.each do |p| %>
+            <a href="post001.html">
+                <section class="col-l5 post">
+                    <header>
+                        <img src="img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
+                        <h2><%=p.title%></h2>
+                    </header>
+                    <article>
+                        <p><%=p.article%></p>
+                    </article>
+                </section>
+            </a>
+        <% end %>
 
         <!--Fim do primeiro Post-->
     </section>
