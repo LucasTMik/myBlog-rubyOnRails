@@ -1,0 +1,212 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* "reset" */
+body{position:absolute; margin: 0px;padding: 0px;width:100%;}
+a, a:visited, a:hover, a:active{text-decoration: none; color: black;}
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+/*Padrão de grade*/
+.row{position: absolute;width:100%;}
+.col-l1{width:8.3333%;position: relative;}.col-l2{width:16.666%;position: relative;}.col-l3{width:25%;position: relative;}
+.col-l4{width:33.3333%;position: relative;}.col-l5{width:41.6666%;position: relative;}.col-l6{width:50%;position: relative;}
+.col-l7{width:58.6666%;position: relative;}.col-l8{width:66.6666%;position: relative;}.col-l9{width:75%;position: relative;}
+.col-l10{width:83.333%;position: relative;}.col-l11{width:91.6666%;position: relative;}.col-l12{width:100%;position: relative;}
+
+/*Imagem de fundo do site*/
+body{
+    background-image:url("../img/background.jpg");
+}
+
+/*Animações*/
+body{animation:my-faded 1s;}
+.post:hover{animation:my-post .5s forwards;-webkit-animation: my-post .5s forwards;}
+.my-left{animation: my-left 1.5s;-webkit-animation: my-left 1.5s;}
+.my-bottom{animation: my-down 1s;-webkit-animation: my-down 1s;}
+.my-mix-hover:hover{animation: my-mix 2s infinite;-webkit-animation: my-mix 2s infinite;}
+.my-btn-hover:hover{animation: btn .2s forwards;-webkit-animation: btn .2s forwards;}
+.sticky{position: fixed !important; top:10px; width:33.3%;}
+
+
+/*Estruturas da lateral*/
+aside{float: right;}
+.atRight{
+    margin: 0px 30px 30px 30px;
+    box-shadow: 2px 4px 11px 0px #000000;
+    background-color:white;
+
+}
+.atRight #perfil{width: 100%;}
+.atRight h3,.atRight p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.title h3{
+    display: block;
+    text-align: center;
+    width:100%;
+    padding: 20px 0 20px ;
+    background-color: #e8e8e8;
+}
+.categorias article{
+    padding: 10px;
+}.categorias li{
+    padding:5px;
+}
+
+/*Padrao de post*/
+.post{
+    
+    margin-left:50px;
+    margin-bottom: 30px;
+    box-shadow: 2px 4px 11px 0px #333333;
+    background-color:white;
+    float:left;
+    height: 530px;
+}
+.post article{
+    max-height: 140px;
+    overflow-y: hidden;
+}
+
+
+.post-img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height:300px;/*altura ideal da foto*/
+}.post-img-400{display: block;object-fit: cover;width: 100%;height: 400px;/*altura ideal*/}
+.date-bt{position:absolute;right:0px;bottom:0px;padding:5px}
+.post h2,h3,.post p{
+    padding:5px 15px 5px 30px;
+    font-size: 20px;
+}
+
+/*Titulo da pagina*/
+#intro{animation:intro 1s ease-out;}
+#logo{
+    border: rgb(255, 255, 255) 3px solid;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 20px;
+    color:white;
+}
+
+
+/*Botoes*/
+.btn-block{
+    display: block;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #e8e8e8;
+}.btn-block:hover{animation:buttons 1s infinite;-webkit-animation: buttons 1s infinite;}
+
+.btn-text{
+    color: rgb(0, 163, 163) !important;
+}
+
+.links{display: inline-block;}
+.links a{background-color:#444444;color:white}
+.to-left{float:left;}
+.to-right{float:right;}
+
+/*Editando o footer*/
+footer#page-footer{
+    font-size:20px;
+    font-style: oblique;
+    font-weight: 100;
+    color:white;
+    padding:18px;
+    clear: both;
+}#page-footer small{
+    text-shadow: 2px 1px #000000;
+}
+
+/*Páginas separadas
+    Página de fotos*/
+
+.post.individual{
+    margin-left: 5.2% !important;
+    
+    max-height: 300px;
+}.post.individual img{
+    width:100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/*Pagina de Artigos
+    Bloco do artigo*/
+.artigo{
+    
+    margin: 0 20px 0 20px;
+    box-shadow: 2px 4px 11px 0px #333333;
+    background-color:white;
+    min-height: 280px;
+}
+/*Espaçamento do texto*/
+.artigo .post-text{
+    padding: 20px 40px 0 30px;
+    margin-bottom:30px;
+}
+
+.artigo .post-music{
+    padding: 20px 40px 0 30px;
+    margin-bottom:30px;
+    width: 100%;
+}
+
+.moldura{
+    padding:20px 30px 0 30px;
+}
+
+/*Ajuste de tabelas*/
+.artigo table{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid black;
+    background-color:rgb(49, 49, 49);
+    color:rgb(255, 255, 255);
+}
+.artigo table td,tr{
+    padding:5px;
+    
+}
+table tr td img{
+    width:50px !important;
+    margin-left:20px;
+}
+
+/*Ajuste da imagem lateral do artigo*/
+.my-h-250{height: 250px;}
+.my-h-500{height: 500px;}
+.my-h-900{height: 900px;}
+
+.my-m-50{margin-top:50px;}
+.artigo img{
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px gray;
+    padding: 2px;
+}
+.moldura-img{
+    padding: 40px 30px 0 30px;
+}
+
+

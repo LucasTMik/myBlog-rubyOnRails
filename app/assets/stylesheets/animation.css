@@ -1,0 +1,76 @@
+/*Animações*/
+
+/*Botoes*/
+/*Escurece o fundo ao passar o mouse*/
+@keyframes btn{
+    from{}
+    to{color:white;background-color:#515151}
+}@-webkit-keyframes btn{
+    from{}
+    to{color:white;background-color:#515151}
+}
+/*Altera a cor do fundo e volta para a anterior*/
+@keyframes buttons{
+    0% {background-color:#e8e8e8}
+    50%{background-color:#8f8f8f}
+    100% {background-color:#e8e8e8}
+}@-webkit-keyframes buttons{
+    0% {background-color:#e8e8e8}
+    50%{background-color:#8f8f8f}
+    100% {background-color:#e8e8e8}
+}
+/*Logo*/
+/*Faz a logo descer do teto*/
+@keyframes intro{
+    from{position: relative;top:-100px;}
+    to{position: relative;top:0px}
+}@-webkit-keyframes intro{
+    from{position: relative;top:-100px;}
+    to{position: relative;top:0px}
+}
+/*Movimento e Entrada
+aparece gradativamente*/
+@keyframes my-faded{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}@-webkit-keyframes my-faded{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/*Faz com que o objeto inicie deslizando para a direita*/
+@keyframes my-left{
+    from{position:absolute; left:-300;filter:blur(5px)}
+    to{ left:0px;}
+}@-webkit-keyframes my-left{
+    from{position:absolute; left:-300}
+    to{ left:0px;}
+}
+/*Faz com que o objeto inicie deslizando de baixo para cima*/
+@keyframes my-down{
+    from{ bottom: -1000}
+    to{bottom:0px;}
+}@-webkit-keyframes my-down{
+    from{ bottom: -1000}
+    to{bottom:0px;}
+}
+/*Animações dos Posts*/
+/*Anima o post ao passar o mouse por cima*/
+@keyframes my-post{
+    from{filter: grayscale(0%) opacity(100%) drop-shadow(0px 0px 0px rgb(0, 0, 0))}
+    to{filter: grayscale(50%) opacity(90%) drop-shadow(10px 10px 10px rgb(0, 0, 0))}
+}@-webkit-keyframes my-post{
+    from{filter: grayscale(0%) opacity(100%) drop-shadow(0px 0px 0px rgb(0, 0, 0))}
+    to{filter: grayscale(50%) opacity(90%) drop-shadow(10px 10px 10px rgb(24, 24, 24))}
+}
+/*Anima a foto do perfil ao passar o mouse por cima*/
+@keyframes my-mix{
+    0%{filter: hue-rotate(0deg)}
+    50%{filter: hue-rotate(360deg)}
+    100%{filter:hue-rotate(0deg)}
+}@-webkit-keyframes my-mix{
+    0%{filter: hue-rotate(0deg)}
+    50%{filter: hue-rotate(360deg)}
+    100%{filter:hue-rotate(0deg)}
+}
+
+
