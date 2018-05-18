@@ -12,7 +12,9 @@
 
   <body>
     <header id="intro"> 
-      <a href="index.html"><h1 class="col-l2" id="logo">welcome TO my BLOG</h1></a>
+      <%= link_to(root_path) do %>
+        <h1 class="col-l2" id="logo">welcome TO my BLOG</h1>
+      <% end %>
     </header>    
     <%= yield %>
     <!--FIm da página-->
