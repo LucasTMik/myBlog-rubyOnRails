@@ -29,11 +29,10 @@
                 </header>
                 <article>
                     <ul>
-                        <li><a class="my-btn-hover" href="fotos.html">Fotos</a></li>
-                        <li><a class="my-btn-hover" href="programaçao.html">Programação</a></li>
-                        <li><a class="my-btn-hover" href="diario.html">Diário</a></li>
-                        <li><a class="my-btn-hover" href="musicas.html">Músicas</a></li>
-
+                        <li><%= link_to "Fotos", pages_fotos_path, class:"my-btn-hover" %></li>
+                        <li><%= link_to "Programação", pages_code_path, class:"my-btn-hover" %></li>
+                        <li><%= link_to "Diário", pages_diary_path, class:"my-btn-hover" %></li>
+                        <li><%= link_to "Músicas", root_path, class:"my-btn-hover" %></li>
                     </ul>
                 </article>
             </section>
@@ -62,17 +61,17 @@
 
         <!--Primeiro e Exemplo de post-->
         <% @posts.each do |p| %>
-            <a href="post001.html">
+            <%= link_to (pages_post_path( :id =>  p.id)) do  %>
                 <section class="col-l5 post">
                     <header>
                         <img src="img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
                         <h2><%=p.title%></h2>
                     </header>
                     <article>
-                        <p><%=p.article%></p>
+                        <p><%=p.callText%></p>
                     </article>
                 </section>
-            </a>
+            <% end %>
         <% end %>
 
         <!--Fim do primeiro Post-->

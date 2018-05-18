@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'pages/home'
+  get 'pages/diary'
+  get 'pages/code'
+  get 'pages/fotos'
+  get 'pages/post' => ':id' 
 
   root 'pages#home'
 end
