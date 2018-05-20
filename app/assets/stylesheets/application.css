@@ -20,10 +20,27 @@ a, a:visited, a:hover, a:active{text-decoration: none; color: black;}
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 /*Padrão de grade*/
 .row{position: absolute;width:100%;}
-.col-l1{width:8.3333%;position: relative;}.col-l2{width:16.666%;position: relative;}.col-l3{width:25%;position: relative;}
-.col-l4{width:33.3333%;position: relative;}.col-l5{width:41.6666%;position: relative;}.col-l6{width:50%;position: relative;}
-.col-l7{width:58.6666%;position: relative;}.col-l8{width:66.6666%;position: relative;}.col-l9{width:75%;position: relative;}
-.col-l10{width:83.333%;position: relative;}.col-l11{width:91.6666%;position: relative;}.col-l12{width:100%;position: relative;}
+@media screen and (min-width:959px){
+    .col-l1{width:8.3333%;position: relative;}.col-l2{width:16.666%;position: relative;}.col-l3{width:25%;position: relative;}
+    .col-l4{width:33.3333%;position: relative;}.col-l5{width:41.6666%;position: relative;}.col-l6{width:50%;position: relative;}
+    .col-l7{width:58.6666%;position: relative;}.col-l8{width:66.6666%;position: relative;}.col-l9{width:75%;position: relative;}
+    .col-l10{width:83.333%;position: relative;}.col-l11{width:91.6666%;position: relative;}.col-l12{width:100%;position: relative;}
+}
+
+
+@media screen and (min-width:560px) and (max-width:958px){
+    .col-m1{width:8.3333%;position: relative;}.col-m2{width:16.666%;position: relative;}.col-m3{width:25%;position: relative;}
+    .col-m4{width:33.3333%;position: relative;}.col-m5{width:41.6666%;position: relative;}.col-m6{width:50%;position: relative;}
+    .col-m7{width:58.6666%;position: relative;}.col-m8{width:66.6666%;position: relative;}.col-m9{width:75%;position: relative;}
+    .col-m10{width:83.333%;position: relative;}.col-m11{width:91.6666%;position: relative;}.col-m12{width:100%;position: relative;}
+}
+
+@media screen and (max-width:559px){
+    .col-s1{width:8.3333%;position: relative;}.col-s2{width:16.666%;position: relative;}.col-s3{width:25%;position: relative;}
+    .col-s4{width:33.3333%;position: relative;}.col-s5{width:41.6666%;position: relative;}.col-s6{width:50%;position: relative;}
+    .col-s7{width:58.6666%;position: relative;}.col-s8{width:66.6666%;position: relative;}.col-s9{width:75%;position: relative;}
+    .col-s10{width:83.333%;position: relative;}.col-s11{width:91.6666%;position: relative;}.col-s12{width:100%;position: relative;}
+}
 
 /*Imagem de fundo do site*/
 body{
@@ -69,7 +86,7 @@ aside{float: right;}
 /*Padrao de post*/
 .post{
     
-    margin-left:50px;
+    margin-left:30px;
     margin-bottom: 30px;
     box-shadow: 2px 4px 11px 0px #333333;
     background-color:white;
@@ -141,13 +158,14 @@ footer#page-footer{
     Página de fotos*/
 
 .post.individual{
-    margin-left: 5.2% !important;
+    margin-left: 5.5% !important;
     
-    max-height: 300px;
+    max-height: 400px;
 }.post.individual img{
     width:100%;
     object-fit: cover;
-    max-height: 300px;
+    min-height:400px;
+    max-height:400px;   
 }
 
 /*Pagina de Artigos

@@ -1,27 +1,29 @@
-<section class="artigo">
-    <section class="row col-l12">
-        <section class="col-l4 to-right moldura-img" >
+<section class="artigo" style="clear:both">
+    <section class="row col-l12 col-m12 col-s12">
+        <section class="col-l4 col-m12 col-s12 to-right moldura-img" >
                 <!--<img class="post-img my-h-<%250%>" src="img/bkgd-1.jpg" alt="eu">-->
         </section>
-        <header class="col-l6 moldura">
+        <header class="col-l6 col-m12 col-s12 moldura">
             <h2><%= @post.title %></h2>
         </header>
-        <article class="col-l6 post-text">
+        <article class="col-l6 col-m12 col-s12 post-text">
             <h3><%= @post.text %></h3>
             <p>
                 <%= @post.callText %>
             </p>
             <p>
-
+                
             </p> 
+     
             <span> <%= @post.created_at %></span>
+            
         </article>
     
     </section>
     <!--Parte inferior do Artigo-->
-    <footer class="col-l12">
-        <%= link_to "Compartilhar", root_path, class:"btn-block col-l6 to-right" %>
-        <%= link_to "Voltar", root_path, class:"btn-block col-l6 to-right" %>
+    <footer class="col-l12 col-m12 col-s12">
+        <%= link_to "Compartilhar", root_path, class:"btn-block col-l6 col-m6 col-s12 to-right" %>
+        <%= link_to "Voltar", root_path, class:"btn-block col-l6 col-m6 col-s12 to-right" %>
     </footer>
     <!--Fim da Parte inferior do Artigo-->
 </section>

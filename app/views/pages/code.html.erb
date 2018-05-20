@@ -1,7 +1,7 @@
 <section class="col-l12 my-left">
     <% @posts.each do |p| %>
         <%= link_to (pages_post_path(:id => p.id)) do  %>
-            <section class="col-l3 post">
+            <section class="col-l3 col-s10 col-m5 post">
                 <header>
                     <img src="../img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
                     <h2><%=p.title%></h2>

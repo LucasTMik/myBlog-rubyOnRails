@@ -16,12 +16,38 @@
                 </p>
             </article>
             <footer>
-                <a href="post001.html" class="btn-block">..mooore..</a>
+                <%= link_to "..mooore..", root_path, class:"btn-block" %>
             </footer>
         </section>
+    </aside>
         <!--Fim Quem sou eu-->
-        <!--Parte categorias/redes fixas-->
-        <div id="fixo">
+
+    <!--Fim lateral direita-->
+
+    <!--Área esquerda dos Posts-->
+    <section class="col-l8 col-s11 my-left">
+
+        <!--Primeiro e Exemplo de post-->
+        <% @posts.each do |p| %>
+            <%= link_to (pages_post_path( :id =>  p.id)) do  %>
+                <section class="col-l5 col-s11 col-m11 post">
+                    <header>
+                        <img src="img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
+                        <h2><%=p.title%></h2>
+                    </header>
+                    <article>
+                        <p><%=p.callText%></p>
+                    </article>
+                </section>
+            <% end %>
+        <% end %>
+
+        <!--Fim do primeiro Post-->
+    </section>
+    <!--Fim dos Posts-->
+            <!--Parte categorias/redes fixas-->
+    <aside class="col-l4 col-s12 col-m12 my-bottom ">
+        <div >
             <!--Categorias-->
             <section class="atRight categorias">
                 <header class="title">
@@ -54,27 +80,4 @@
         </div>
         <!--Fim Categorias/Redes fixas-->
     </aside>
-    <!--Fim lateral direita-->
-
-    <!--Área esquerda dos Posts-->
-    <section class="col-l8 my-left">
-
-        <!--Primeiro e Exemplo de post-->
-        <% @posts.each do |p| %>
-            <%= link_to (pages_post_path( :id =>  p.id)) do  %>
-                <section class="col-l5 post">
-                    <header>
-                        <img src="img/bkgd-1.jpg" class="post-img" alt="imagem post001"/>
-                        <h2><%=p.title%></h2>
-                    </header>
-                    <article>
-                        <p><%=p.callText%></p>
-                    </article>
-                </section>
-            <% end %>
-        <% end %>
-
-        <!--Fim do primeiro Post-->
-    </section>
-    <!--Fim dos Posts-->
 </section>
